@@ -1,0 +1,14 @@
+name: flutter_every_day
+description: A CLI wizard to interactively download and manage daily Flutter mini-apps without native folder bloat.
+version: 1.0.0
+repository: https://github.com/VineetHegde/FlutterEveryDay
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  interact: ^2.1.1
+  path: ^1.8.3     
+
+executables:
+  flutter_every_day: flutter_every_day
