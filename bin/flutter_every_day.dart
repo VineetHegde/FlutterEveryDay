@@ -67,6 +67,7 @@ void main() async {
       'flutter', 
       ['create', '.'],
       workingDirectory: destAppDir.path,
+      runInShell: true,
     );
 
     if (createResult.exitCode != 0) {
