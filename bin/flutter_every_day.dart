@@ -63,11 +63,13 @@ void main() async {
     print('Generating native Android/iOS/Windows files...');
 
     // 7. Generate the Flutter platform folders
+    final String flutterCommand = Platform.isWindows ? 'flutter.bat' : 'flutter';
+
     final createResult = await Process.run(
-      'flutter', 
+      flutterCommand, 
       ['create', '.'],
       workingDirectory: destAppDir.path,
-      runInShell: true,
+      runInShell: true, 
     );
 
     if (createResult.exitCode != 0) {
