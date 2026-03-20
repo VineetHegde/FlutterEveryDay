@@ -33,7 +33,7 @@ An interactive arrow-key menu will appear. Select your desired app, and the CLI 
 As new mini-apps are added to the repository, you can update your local CLI tool to get the latest menu by simply running the activation command again:
 
 ```bash
-dart pub global activate --source git [https://github.com/VineetHegde/FlutterEveryDay](https://github.com/VineetHegde/FlutterEveryDay)
+dart pub global activate --source git https://github.com/VineetHegde/FlutterEveryDay
 ```
 
 ## ⚠️ Troubleshooting
