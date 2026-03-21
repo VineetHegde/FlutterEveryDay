@@ -8,7 +8,8 @@ void main() async {
   print('-----------------------------------');
 
   final Map<String, String> apps = {
-    'Day 01: GitHub Viewer': 'day01_github_viewer',
+    'Day 01: GitHub Viewer (Dart http)': 'day01_github_viewer',
+    'Day 02: Notes App (Hive DataBase)': 'day02_notes_app',
   };
 
   final appNames = apps.keys.toList();
@@ -28,8 +29,7 @@ void main() async {
   final repoUrl = 'https://github.com/VineetHegde/FlutterEveryDay.git';
 
   try {
-    // 4. THE OPTIMIZED WAY: Sparse Checkout
-    // First, clone ONLY the directory structure (no file contents downloaded yet)
+    // clone ONLY the directory structure (no file contents downloaded yet)
     var result = await Process.run('git', [
       'clone', 
       '--filter=blob:none', 
@@ -40,7 +40,7 @@ void main() async {
     
     if (result.exitCode != 0) throw Exception('Git clone failed: ${result.stderr}');
 
-    // Tell Git to ONLY download the files inside our specific target folder
+    //Git to ONLY download the files inside specific target folder
     result = await Process.run('git', [
       'sparse-checkout', 
       'set', 
@@ -49,20 +49,20 @@ void main() async {
 
     if (result.exitCode != 0) throw Exception('Sparse checkout failed: ${result.stderr}');
 
-    // 5. Locate the downloaded files
+    //Locate the downloaded files
     final sourceAppDir = Directory(p.join(tempDir.path, 'mini_apps', targetFolder));
     
     if (!await sourceAppDir.exists()) {
       throw Exception('Could not find $targetFolder in the repository.');
     }
 
-    // 6. Move the pristine code to the user's current directory
+    //Move the pristine code to user's current directory
     final destAppDir = Directory(p.join(Directory.current.path, targetFolder));
     await copyDirectory(sourceAppDir, destAppDir);
 
     print('Generating native Android/iOS/Windows files...');
 
-    // 7. Generate the Flutter platform folders
+    // Generate Flutter platform folders
     final String flutterCommand = Platform.isWindows ? 'flutter.bat' : 'flutter';
 
     final createResult = await Process.run(
@@ -84,7 +84,7 @@ void main() async {
   } catch (e) {
     print('\n Error: $e');
   } finally {
-    // 8. Clean up
+    // Clean up
     if (await tempDir.exists()) {
       await tempDir.delete(recursive: true);
     }
