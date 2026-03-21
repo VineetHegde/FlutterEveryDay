@@ -28,6 +28,14 @@ flutter_every_day
 ```
 An interactive arrow-key menu will appear. Select your desired app, and the CLI will handle the downloading and native file generation automatically!
 
+## 🔄 How to Update
+
+As new mini-apps are added to the repository, you can update your local CLI tool to get the latest menu by simply running the activation command again:
+
+```bash
+dart pub global activate --source git https://github.com/VineetHegde/FlutterEveryDay
+```
+
 ## ⚠️ Troubleshooting
 
 **Error: "The term 'flutter_every_day' is not recognized"**
