@@ -10,6 +10,7 @@ void main() async {
   final Map<String, String> apps = {
     'Day 01: GitHub Viewer (Dart http)': 'day01_github_viewer',
     'Day 02: Notes App (Hive DataBase)': 'day02_notes_app',
+    'Day 03: Task App I(Parent to Child Communication)': 'day03_parent_to_child_communication',
   };
 
   final appNames = apps.keys.toList();
