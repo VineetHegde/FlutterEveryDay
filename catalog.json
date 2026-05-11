@@ -15,7 +15,6 @@
     "folderName": "day01_github_viewer",
     "filesToFetch": ["main.dart"],
     "demoMediaUrl": "mini_apps/day01_github_viewer/demo/Gemini.png",
-    "demoAspectRatio": 0.5625
   },
   {
     "day": 2,
