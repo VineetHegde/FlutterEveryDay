@@ -14,7 +14,7 @@
     ],
     "folderName": "day01_github_viewer",
     "filesToFetch": ["main.dart"],
-    "demoMediaUrl": "raw.githubusercontent.com/VineetHegde/FlutterEveryDay/main/mini_apps/day01_github_viewer/demo/Gemini.png"
+    "demoMediaUrl": "https://raw.githubusercontent.com/VineetHegde/FlutterEveryDay/main/mini_apps/day01_github_viewer/demo/Gemini.png"
   },
   {
     "day": 2,
