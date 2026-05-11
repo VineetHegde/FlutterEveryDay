@@ -1,0 +1,36 @@
+[
+  {
+    "day": 1,
+    "title": "GitHub Viewer",
+    "description": "Build a Flutter app that fetches and displays GitHub repositories...",
+    "tag": "Networking",
+    "tagColor": "primary",
+    "packageDescription": "The \"http\" package provides a simple, Future-based API for making HTTP requests.",
+    "authorTeam": "Built and maintained by the core Dart Team at Google.",
+    "realWorldUseCases": [
+      "Fetching user feeds in social media apps.",
+      "Communicating with payment gateways.",
+      "Downloading remote configuration files."
+    ],
+    "folderName": "day01_github_viewer",
+    "filesToFetch": ["main.dart"],
+    "demoMediaUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80",
+    "demoAspectRatio": 0.5625
+  },
+  {
+    "day": 2,
+    "title": "Notes App",
+    "description": "Create a full CRUD notes app with local persistence using SQLite...",
+    "tag": "Local Storage",
+    "tagColor": "secondary",
+    "packageDescription": "The \"sqflite\" package provides a high-reliability SQL database engine.",
+    "authorTeam": "Developed by Simon Le Dico (tekartik).",
+    "realWorldUseCases": [
+      "Building offline-first applications.",
+      "Caching heavy network data.",
+      "Storing complex user preferences."
+    ],
+    "folderName": "day02_hive_db",
+    "filesToFetch": ["main.dart"]
+  }
+]
